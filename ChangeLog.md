@@ -14,6 +14,8 @@ GitHub release pages and in the git history.
 ### Fixes
 
 - Update and clear the Python legacy error message after API calls.
+- Reject incompatible axis lengths before enumerating lattice symmetry
+  candidates, preserving the returned operations and their order.
 - Apply the Cartesian standardization rotation in magnetic datasets.
   `std_rotation_matrix` is now a proper rotation in the standardized setting, and
   `std_lattice` and `std_tensors` follow the documented idealized orientation.
@@ -99,7 +101,7 @@ For backward compatibility, the `dict`-like interface is still available, but it
 ```python
 spgtype: SpaceGroupType | None = get_spacegroup_type(cell)
 assert spgtype is not None
-print(spgtype['number'])
+print(spgtype["number"])
 print(list(spgtype.items()))
 ```
 
@@ -112,6 +114,7 @@ print(spgtype.number)
 
 # If you really need dictionary, ...
 from dataclasses import asdict
+
 print(asdict(spgtype))
 ```
 
