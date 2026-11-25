@@ -11,6 +11,13 @@ GitHub release pages and in the git history.
 
 ## [Unreleased]
 
+### Python API
+
+- Reject `numbers` inputs that are not one-dimensional array-likes of integers,
+  including integer-valued floating-point arrays, before conversion to C integers.
+- Include NumPy array types in the `Lattice`, `Positions`, `Numbers`, and `Magmoms`
+  input annotations.
+
 ### Fixes
 
 - Update and clear the Python legacy error message after API calls.
