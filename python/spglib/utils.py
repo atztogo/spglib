@@ -132,7 +132,9 @@ def spg_get_commit() -> str:
 
 def _expand_cell(
     cell: Cell,
-) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray | None]:
+) -> tuple[
+    NDArray[np.double], NDArray[np.double], NDArray[np.intc], NDArray[np.double] | None
+]:
     try:
         if len(cell) not in (3, 4):
             raise TypeError("cell has to be a tuple of 3 or 4 elements.")
