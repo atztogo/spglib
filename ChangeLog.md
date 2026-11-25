@@ -13,6 +13,7 @@ GitHub release pages and in the git history.
 
 ### Fixes
 
+- Update and clear the Python legacy error message after API calls.
 - Reject incompatible axis lengths before enumerating lattice symmetry
   candidates, preserving the returned operations and their order.
 - Apply the Cartesian standardization rotation in magnetic datasets.
